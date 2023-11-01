@@ -1,0 +1,5 @@
+package com.estudos.controllers;
+
+public class UserController {
+
+}

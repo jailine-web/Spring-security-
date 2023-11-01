@@ -1,0 +1,28 @@
+package com.estudos.controllers;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/")
+public class UserController {
+
+
+	@GetMapping("/home")
+	public String publicRoute() {
+		return "Public route, feel free to look around";
+	}
+	
+	@GetMapping("/")
+	public String publicNadaSoTeste() {
+	return	"Seja bem-vindo ao xxx";
+	}
+
+	@GetMapping("/private")
+	public String privateRoute() {
+		return "Private route, only authorized personal!";
+	}
+
+	
+}
