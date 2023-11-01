@@ -18,6 +18,7 @@ public class SecurityConfig {
 						authorizeConfig -> {
 							authorizeConfig.requestMatchers("/home").permitAll();
 							authorizeConfig.requestMatchers("/user").permitAll();
+							authorizeConfig.requestMatchers("/adm").hasRole("ADMIN");
 							authorizeConfig.anyRequest().authenticated();
 							
 						})
